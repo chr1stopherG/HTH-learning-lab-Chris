@@ -1,0 +1,21 @@
+h1{
+    color: rgb(83, 6, 35);
+    text-align: center;
+}
+p{
+    color: rgb(120, 29, 40);
+    font-weight: 800;
+}
+.styling-ul{
+    color: rgb(219, 78, 106)
+}
+
+li::marker{
+    color: rgb(101, 164, 99)
+}
+a[href]{
+    color:rgb(26, 71, 26)
+}
+a:hover{
+    color: #8ACE00
+}
