@@ -11,26 +11,35 @@ const products = {
     apple:[0.79, 23],
 }
 
-let shoppingCart = [['banana', 4] ,['yogurt', 3],['dozenEggs', 3], ['wholeWheatBread',1], ['pintIceCreamStraw',1]];
+const shoppingCart = [['banana', 4] ,['yogurt', 4],['dozenEggs', 3], ['wholeWheatBread',1], ['pintIceCreamStraw',1]];
 let total = 0;
+function printResult (){
+    console.log(total.toFixed(2));
+}
+function checkQuantity(stockedCount, cartCount){
+    //checks if there is enough in stock to fulfill the shopping cart's request. 
+    // If there isn't enough, just sells what's available
+    //literally just a return min function
+    if (stockedCount <cartCount){
+        // console.log('Not enough product in stock');
+        return stockedCount;
+    }
+    return cartCount;
+}
 
 for (let i = 0; i< shoppingCart.length; i++){
     let itemTuple = shoppingCart[i];
     let item = itemTuple[0];
     let itemCount = itemTuple[1]; 
-    console.log(products[item]);
     let prodPrice = products[item][0];
     let prodCount = products[item][1] ;
-    if (prodCount <itemCount){
-        itemCount = prodCount 
-        console.log('Not enough product in stock')
-    }
+    itemCount = checkQuantity(prodCount, itemCount);
     products[item][1] = products[item][1] - itemCount;
     if (products[item][1] === 0){
         products[item][1] = 'OUT OF STOCK';
     }
     total = total + prodPrice*itemCount;
-    console.log(products[item][1]);
-
 }
-console.log(total.toFixed(2));
+printResult();
+
+module.exports =  {checkQuantity};

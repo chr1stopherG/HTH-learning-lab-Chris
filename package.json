@@ -1,0 +1,20 @@
+{
+  "name": "hth-learning-lab-chris",
+  "version": "1.0.0",
+  "description": "",
+  "main": "grocery.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chr1stopherG/HTH-learning-lab-Chris.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chr1stopherG/HTH-learning-lab-Chris/issues"
+  },
+  "homepage": "https://github.com/chr1stopherG/HTH-learning-lab-Chris#readme"
+}
